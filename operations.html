@@ -16,7 +16,13 @@ function operaciones(op)
 
         restar: function restarNumeros(n1, n2) {
             return (parseInt(n1) - parseInt(n2));
+        },
+        
+        multiplicar: function multiplicarNumeros(n1, n2) {
+            return (parseInt(n1) * parseInt(n2));
         }
+        
+        
 
 
     };
@@ -48,8 +54,11 @@ function operaciones(op)
                 var resultado = ops.restar(num1, num2);
                 alert (resultado);
                 break;
-
-
+                
+            case 'multiplicar':
+                var resultado = ops.multiplicar(num1, num2);
+                alert(resultado);
+                break;
         }
     }
 
@@ -69,7 +78,7 @@ function operaciones(op)
     <input value="SUMAR" onclick="operaciones('sumar'); return false;" type="button"><br>
     <input value="RESTAR" onclick="operaciones('restar'); return false;" type="button"><br>
     <input value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" type="button"><br>
-    <input value="DIVIDIR" onclick="operaciones('dividir'); return false;" type="button">
+
 </form>
 
 
