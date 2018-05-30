@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<title>Calculator</title><meta charset="utf-8">
+        <title>Calculator</title><meta charset="utf-8">
 
-<script type="text/javascript">
+        <script type="text/javascript">
 
-function operaciones(op)
-{
+            function operaciones(op)
+            {
 
-    var ops = {
-        sumar: function sumarNumeros(n1, n2) {
-            return (parseInt(n1) + parseInt(n2));
-        },
+                var ops = {
+                    sumar: function sumarNumeros(n1, n2) {
+                        return (parseInt(n1) + parseInt(n2));
+                    },
 
+<<<<<<< HEAD
         restar: function restarNumeros(n1, n2) {
             return (parseInt(n1) - parseInt(n2));
         },
@@ -23,15 +24,22 @@ function operaciones(op)
         }
         
         
+=======
+                    restar: function restarNumeros(n1, n2) {
+                        return (parseInt(n1) - parseInt(n2));
+                    },
+>>>>>>> master
+
+                    multiplicar: function multiplicarNumeros(n1, n2) {
+                        return (parseInt(n1) * parseInt(n2));
+                    }
 
 
-    };
+                };
 
 
 
-    var num1 = document.getElementById("num1").value;
-    var num2 = document.getElementById("num2").value;
-
+<<<<<<< HEAD
     
     //Comprobamos si se ha introducido números en las cajas
     if (isNaN(parseFloat(document.getElementById('num1').value))) {
@@ -61,16 +69,48 @@ function operaciones(op)
                 break;
         }
     }
+=======
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
 
-}
-</script>
 
-</head>
+                //Comprobamos si se ha introducido números en las cajas
+                if (isNaN(parseFloat(document.getElementById('num1').value))) {
+                    alert("Indique un número en 'numero1'");
+                    document.getElementById("num1").innerText = "0";
+                    document.getElementById("num1").focus();
+                } else if (isNaN(parseFloat(document.getElementById('num2').value))) {
+                    alert("Indique un número en 'numero2'");
+                    document.getElementById("num2").innerText = "0";
+                    document.getElementById("num2").focus();
+                } else {
+                    //Si se han introducido los números en ámbas cajas, operamos:
+                    switch (op) {
+                        case 'sumar':
+                            var resultado = ops.sumar(num1, num2);
+                            alert(resultado);
+                            break;
+                        case 'restar':
+                            var resultado = ops.restar(num1, num2);
+                            alert(resultado);
+                            break;
+                        case 'multiplicar':
+                            var resultado = ops.multiplicar(num1, num2);
+                            alert(resultado);
+                            break;
+>>>>>>> master
 
-<body>
+                    }
+                }
 
-<h1>Script de Jorge Juan Antolino Guil</h1>
+            }
+        </script>
 
+    </head>
+
+    <body>
+
+<<<<<<< HEAD
 <form>
     Número 1: <input id="num1" type="number">
     Número 2: <input id="num2" type="number">
@@ -80,7 +120,21 @@ function operaciones(op)
     <input value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" type="button"><br>
 
 </form>
+=======
+        <h1>Script de Jorge Juan Antolino Guil</h1>
+>>>>>>> master
+
+        <form>
+            Número 1: <input id="num1" type="number">
+            Número 2: <input id="num2" type="number">
+            <br><br>
+            <input value="SUMAR" onclick="operaciones('sumar');
+                    return false;" type="button"><br>
+            <input value="RESTAR" onclick="operaciones('restar'); return false;" type="button"><br>
+            <input value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" type="button"><br>
+            <input value="DIVIDIR" onclick="operaciones('dividir'); return false;" type="button">
+        </form>
 
 
 
-</body></html>
+    </body></html>
